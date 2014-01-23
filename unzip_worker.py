@@ -2,7 +2,7 @@
 import pika, time, os
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(
-               'datacopym01.ctecfts.com'))
+               'your.rabbitmq.server.com'))
 channel = connection.channel()
 
 channel.queue_declare(queue='unzip_queue', durable=True)
